@@ -1,0 +1,55 @@
+.app-images::-webkit-scrollbar, .tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.app-images, .tabs-container {
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background: #00acc1;
+  transform: rotate(180deg);
+}
+
+.wave {
+  background: url("../assets/images/wave.svg") repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+.active {
+  @apply text-secondary;
+}
+
+@screen lg {
+  .headroom-wrapper {
+    display: none;
+  }
+}

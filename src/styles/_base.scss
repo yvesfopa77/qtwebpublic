@@ -1,0 +1,19 @@
+:root {
+  --brand-color: #00acc1;
+  --secondary-color: #405467;
+}
+
+body {
+  background-color: #f5f6f9;
+  @apply font-body;
+}
+
+.main-site {
+  top: -4px;
+}
+
+@screen sm {
+  .main-site {
+    top: -1px;
+  }
+}
